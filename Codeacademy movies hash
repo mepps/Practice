@@ -1,0 +1,53 @@
+movies = {Anchorman: 4, Little_Miss_Sunshine: 3, Buffy_the_Vampire_Slayer: 4}
+puts "Would you like to add (type 'add'), delete (type 'delete'), display (type 'display') or update (type 'update') a movie?"
+choice = gets.chomp
+case choice
+when "add"
+  puts "What movie would you like to add?"
+  title = gets.chomp.capitalize!
+  if movies[title.to_sym].nil?
+    puts "What is your rating of this movie between 1 and 4?"
+    rating = gets.chomp
+    movies[title.to_sym] = rating.to_i
+    puts "#{title.capitalize} has been added with a rating of #{rating} to movies!"
+  else
+    puts "Your movie is already there! It's rating is #{movies[title.to_sym]}!"
+end
+when "update"
+  puts "What movie's rating would you like to update?"
+  title = gets.chomp.capitalize!
+  if movies[title.to_sym].nil?
+    puts "Error! Not in movies! Would you like to it (yes or no)?"
+    input = gets.chomp
+    if input == "yes"
+      puts "What is your rating of this movie between 1 and 4?"
+      rating = gets.chomp
+      movies[title.to_sym] = rating.to_i
+      puts "#{title.capitalize} has been added with a rating of #{rating} to movies!"
+      else
+      puts "Okay, bye for now!"
+    end
+  else
+    puts "What is your new rating between 1 and 4?"
+    rating = gets.chomp
+    movies[title.to_sym] = rating.to_i
+end
+ movies.each do |x, y|
+  puts "#{x}: #{y}"
+  end
+when "display"
+  movies.each do |x, y|
+  puts "#{x}: #{y}"
+  end
+when "delete"
+  puts "What movie would you like to delete?"
+  title = gets.chomp.capitalize!
+  if movies[title.to_sym].nil?
+  puts "Error! Not in movies!"
+  else
+  movies.delete(title)
+  puts "#{title} has been deleted!"
+  end
+else
+  puts "Error!"
+end

@@ -1,0 +1,20 @@
+        image {
+            position: relative;
+            width: 100%; /* for IE 6 */
+        }
+        
+        h2 {
+            position: absolute;
+            text-align: right;
+            top: 0
+            right: 300em;
+            width: 100%;
+        }
+        h2 span {
+            color: white;
+            font: bold 24 px/45px Helvetica, Sans-Serif;
+            letter-pacing: -1px;
+            background: rgb(0, 0, 0);
+            background: rgba(0, 0, 0, 0.7);
+            padding 10px;
+        }

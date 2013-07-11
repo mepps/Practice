@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<title>This is my JavaScript playground</title>
+<body>
+
+<script>
+function love(name)
+{
+	alert("I love " + name + "!")
+}
+</script>
+<p id="test"></p>
+
+<script>
+x="", i=0;
+while (i<5)
+  {
+  x=x + "The number is " + i + "<br>";
+  i++;
+  }
+  document.getElementById("test").innerHTML=x;
+ 
+var person=new Object();
+person.firstname="Spencie";
+person.lastname="Love";
+person.age=62;
+person.eyecolor="brown";
+/*document.getElementById("test").innerHTML="hi!";
+*/
+</script>
+
+
+<button type="button" onclick="love(person.firstname + ' ' + person.lastname)">Who do I love?</button>
+
+
+
+</body>
+</html>
+<script>
+//"I love "+person.firstname+" "+person.lastname+" who is "+person.age+" years old."
+</script>
+
